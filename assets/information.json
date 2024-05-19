@@ -5,18 +5,22 @@
             "amenities": [
                 {
                     "name": "Laundry",
+                    "id": "laundry",
                     "description": "Washer and dryer on site"
                 },
                 {
                     "name": "Kitchen",
+                    "id": "kitchen",
                     "description": "Full kitchen available for use"
                 },
                 {
                     "name": "Bathroom",
+                    "id": "bathroom",
                     "description": "Shared bathroom"
                 },
                 {
                     "name": "Parking",
+                    "id": "parking",
                     "description": "Parking available"
                 }
             ]
@@ -26,18 +30,22 @@
             "amenities": [
                 {
                     "name": "Laundry",
+                    "id": "laundry",
                     "description": "Washer and dryer on site"
                 },
                 {
                     "name": "Baseball Field",
+                    "id": "baseball_field",
                     "description": "Baseball field available for use"
                 },
                 {
                     "name": "Bathroom",
+                    "id": "bathroom",
                     "description": "Shared bathroom"
                 },
                 {
                     "name": "Convenience Store",
+                    "id": "convenience_store",
                     "description": "Convenience store on site"
                 }
             ]
@@ -47,18 +55,22 @@
             "amenities": [
                 {
                     "name": "basketball court",
+                    "id": "basketball_court",
                     "description": "Basketball court available for use"
                 },
                 {
                     "name": "Kitchen",
+                    "id": "kitchen",
                     "description": "Full kitchen available for use"
                 },
                 {
                     "name": "Bathroom",
+                    "id": "bathroom",
                     "description": "Shared bathroom"
                 },
                 {
                     "name": "Hospital",
+                    "id": "hospital",
                     "description": "Hospital on site"
                 }
             ]
@@ -68,18 +80,22 @@
             "amenities": [
                 {
                     "name": "Shopping mall",
+                    "id": "shopping_mall",
                     "description": "Shopping mall on site"
                 },
                 {
                     "name": "public transportation",
+                    "id": "public_transportation",
                     "description": "Public transportation available"
                 },
                 {
                     "name": "Costco",
+                    "id": "costco",
                     "description": "Costco on site"
                 },
                 {
                     "name": "Parking",
+                    "id": "parking",
                     "description": "Parking available"
                 }
             ]

@@ -1,11 +1,6 @@
 <template>
   <div>
     <h1>This is dorm {{ id }}</h1>
-    <!-- <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iste
-        harum voluptates hic molestiae quos atque excepturi voluptatem dignissimos
-        numquam!
-      </p> -->
   </div>
 
   <div>
@@ -13,9 +8,9 @@
       Go back to index page
     </button>
 
-    <NuxtLink :to="`/dorm/${id}/details`">
+    <NuxtLink :to="`/dorm/${this.id}/${this.details}`">
       <LargeButton
-        :text="myText1"
+        :text="this.text"
         class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
     </NuxtLink>
@@ -23,7 +18,7 @@
     <NuxtLink :to="`/dorm/${id}/details`">
       <LargeButton
         :text="myText2"
-        class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2"
+        class="absolute top-1/2 left-1/3 -translate-x-1/4 -translate-y-1/2"
       />
     </NuxtLink>
 
@@ -37,7 +32,7 @@
     <NuxtLink :to="`/dorm/${id}/details`">
       <LargeButton
         :text="myText4"
-        class="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2"
+        class="absolute top-1/2 left-2/3 -translate-x-3/4 -translate-y-1/2"
       />
     </NuxtLink>
   </div>
@@ -69,6 +64,23 @@ export default {
     id() {
       return this.$route.params.id;
     },
+    details() {
+      return info.dorm[this.id].amenities[0].id;
+    },
+    text() {
+      return info.dorm[this.id].amenities[0].name;
+    },
+    // details(order) {
+    //   return info.dorm[this.id].amenities[this.order].id;
+    // },
+    // text(order) {
+    //   return info.dorm[this.id].amenities[this.order].name;
+    // },
+    // link() {
+    //   return `/dorm/${this.id}/${this.details}`;
+    // },
+    // cssHere() {
+    // }
   },
 };
 </script>
