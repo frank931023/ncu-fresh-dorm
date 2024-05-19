@@ -1,16 +1,11 @@
 <template>
   <div class="flex items-center justify-around h-screen">
-    <div class="flex flex-col items-center text-center">
-      <SquareButton :route="'/dorm/1'" :text="info.dorm[0].name" />
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <SquareButton :route="'/dorm/2'" :text="info.dorm[1].name" />
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <SquareButton :route="'/dorm/3'" text="女二" />
-    </div>
-    <div class="flex flex-col items-center text-center">
-      <SquareButton :route="'/dorm/4'" text="女四" />
+    <div
+      class="flex flex-col items-center text-center"
+      v-for="(dorm, index) in info.dorm"
+      :key="index"
+    >
+      <SquareButton :route="`/dorm/${index + 1}`" :text="dorm.name" />
     </div>
   </div>
 </template>

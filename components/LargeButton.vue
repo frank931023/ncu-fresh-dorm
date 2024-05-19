@@ -1,11 +1,10 @@
 <template>
   <div>
-    <button
-      class="w-64 h-64 rotate-45 border-2 border-black bg-neutral-300"
-      @click="handleClick"
+    <div
+      class="w-64 h-64 rotate-45 border-2 border-black bg-neutral-300 flex items-center justify-center"
     >
-      <p>{{ text }}</p>
-    </button>
+      <p class="">{{ text }}</p>
+    </div>
   </div>
 </template>
   
@@ -13,12 +12,6 @@
 export default {
   // Your component logic goes here
   props: ["text"],
-  methods: {
-    handleClick() {
-      // this.$router.push("/dorm/1/details");
-      alarm("You click the button!");
-    },
-  },
 };
 </script>
   

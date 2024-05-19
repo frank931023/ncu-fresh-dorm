@@ -41,6 +41,48 @@
                     "description": "Convenience store on site"
                 }
             ]
+        },
+        {
+            "name": "Dorm 3",
+            "amenities": [
+                {
+                    "name": "basketball court",
+                    "description": "Basketball court available for use"
+                },
+                {
+                    "name": "Kitchen",
+                    "description": "Full kitchen available for use"
+                },
+                {
+                    "name": "Bathroom",
+                    "description": "Shared bathroom"
+                },
+                {
+                    "name": "Hospital",
+                    "description": "Hospital on site"
+                }
+            ]
+        },
+        {
+            "name": "Dorm 4",
+            "amenities": [
+                {
+                    "name": "Shopping mall",
+                    "description": "Shopping mall on site"
+                },
+                {
+                    "name": "public transportation",
+                    "description": "Public transportation available"
+                },
+                {
+                    "name": "Costco",
+                    "description": "Costco on site"
+                },
+                {
+                    "name": "Parking",
+                    "description": "Parking available"
+                }
+            ]
         }
     ]
 }

@@ -13,12 +13,6 @@
       Go back to index page
     </button>
 
-    <!-- <LargeButton
-        route="/dorm/1/details"
-        :text="myText1"
-        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      /> -->
-
     <NuxtLink :to="`/dorm/${id}/details`">
       <LargeButton
         :text="myText1"
@@ -26,26 +20,35 @@
       />
     </NuxtLink>
 
-    <!-- <LargeButton
-        route="/dorm/2/details"
+    <NuxtLink :to="`/dorm/${id}/details`">
+      <LargeButton
         :text="myText2"
         class="absolute top-1/2 left-1/3 -translate-x-1/2 -translate-y-1/2"
       />
+    </NuxtLink>
+
+    <NuxtLink :to="`/dorm/${id}/details`">
       <LargeButton
-        route="/dorm/3/details"
         :text="myText3"
         class="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
       />
+    </NuxtLink>
+
+    <NuxtLink :to="`/dorm/${id}/details`">
       <LargeButton
-        route="/dorm/4/details"
         :text="myText4"
         class="absolute top-1/2 left-2/3 -translate-x-1/2 -translate-y-1/2"
-      /> -->
+      />
+    </NuxtLink>
   </div>
 </template>
     
-  <script>
+<script>
 import LargeButton from "~/components/LargeButton.vue";
+import { ref, reactive } from "vue";
+import information from "/assets/information.json";
+
+const info = reactive(information);
 
 export default {
   components: { LargeButton },
