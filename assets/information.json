@@ -1,0 +1,46 @@
+{
+    "dorm": [
+        {
+            "name": "Dorm 1",
+            "amenities": [
+                {
+                    "name": "Laundry",
+                    "description": "Washer and dryer on site"
+                },
+                {
+                    "name": "Kitchen",
+                    "description": "Full kitchen available for use"
+                },
+                {
+                    "name": "Bathroom",
+                    "description": "Shared bathroom"
+                },
+                {
+                    "name": "Parking",
+                    "description": "Parking available"
+                }
+            ]
+        },
+        {
+            "name": "Dorm 2",
+            "amenities": [
+                {
+                    "name": "Laundry",
+                    "description": "Washer and dryer on site"
+                },
+                {
+                    "name": "Baseball Field",
+                    "description": "Baseball field available for use"
+                },
+                {
+                    "name": "Bathroom",
+                    "description": "Shared bathroom"
+                },
+                {
+                    "name": "Convenience Store",
+                    "description": "Convenience store on site"
+                }
+            ]
+        }
+    ]
+}
