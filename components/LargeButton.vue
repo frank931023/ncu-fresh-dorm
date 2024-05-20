@@ -3,7 +3,7 @@
     <div
       class="w-64 h-64 rotate-45 border-2 border-black bg-neutral-300 flex items-center justify-center"
     >
-      <p class="">{{ text }}</p>
+      <p>{{ text }}</p>
     </div>
   </div>
 </template>

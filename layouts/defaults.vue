@@ -1,34 +1,25 @@
 <template>
   <div>
-    <transition :name="transitionName">
+    <transition name="slide-down" mode="out-in">
       <Nuxt />
     </transition>
   </div>
 </template>
 
 <script>
-export default {
-  computed: {
-    transitionName() {
-      return this.$route.name.startsWith("dorm-") ? "slide-down" : "default";
-    },
-  },
-};
 </script>
 
-<style>
-.slide-down-enter-active {
-  transition: all 0.5s ease;
+<style scoped>
+.slide-down-enter-active,
+.slide-down-leave-active {
+  transition: all 0.3s ease;
 }
 .slide-down-enter,
 .slide-down-leave-to {
   transform: translateY(-100%);
 }
-.slide-down-leave-active {
-  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-down-leave,
-.slide-down-enter-to {
+.slide-down-enter-to,
+.slide-down-leave {
   transform: translateY(0);
 }
 </style>

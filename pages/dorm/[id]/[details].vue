@@ -4,7 +4,9 @@
     <button @click="goBackToIndex" class="border-black bg-slate-300">
       Go back to index page
     </button>
-    <!-- Add more details about the dorm here -->
+
+    <BaseCard class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
+
   </div>
 </template>
   
