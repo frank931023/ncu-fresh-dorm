@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Hello, this is {{ details }} for Dorm {{ id }}</h1>
-
     <button @click="goBackToIndex" class="border-black bg-slate-300">
       Go back to index page
     </button>
@@ -15,13 +14,13 @@ export default {
     goBackToIndex() {
       this.$router.push("/");
     },
-    computed: {
-      id() {
-        return this.$route.params.id;
-      },
-      details() {
-        return this.$route.params.details;
-      },
+  },
+  computed: {
+    id() {
+      return this.$route.params.id;
+    },
+    details() {
+      return this.$route.params.details;
     },
   },
 };

@@ -8,33 +8,14 @@
       Go back to index page
     </button>
 
-    <NuxtLink :to="`/dorm/${this.id}/${this.details}`">
-      <LargeButton
-        :text="this.text"
-        class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      />
+    <NuxtLink
+      v-for="(button, index) in buttons"
+      :key="index"
+      :to="button.link"
+    >
+      <LargeButton :text="button.text" :class="button.position" />
     </NuxtLink>
-
-    <NuxtLink :to="`/dorm/${id}/details`">
-      <LargeButton
-        :text="myText2"
-        class="absolute top-1/2 left-1/3 -translate-x-1/4 -translate-y-1/2"
-      />
-    </NuxtLink>
-
-    <NuxtLink :to="`/dorm/${id}/details`">
-      <LargeButton
-        :text="myText3"
-        class="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
-      />
-    </NuxtLink>
-
-    <NuxtLink :to="`/dorm/${id}/details`">
-      <LargeButton
-        :text="myText4"
-        class="absolute top-1/2 left-2/3 -translate-x-3/4 -translate-y-1/2"
-      />
-    </NuxtLink>
+    
   </div>
 </template>
     
@@ -47,40 +28,58 @@ const info = reactive(information);
 
 export default {
   components: { LargeButton },
-  data() {
-    return {
-      myText1: "top",
-      myText2: "left",
-      myText3: "bottom",
-      myText4: "right",
-    };
-  },
   methods: {
     goBackToIndex() {
       this.$router.push("/");
+    },
+    details(order) {
+      const detail = info.dorm[this.id].amenities[order].id;
+      // console.log('detail:', detail);
+      return detail;
+    },
+    text(order) {
+      const text = info.dorm[this.id].amenities[order].name;
+      // console.log('text:', text);
+      return text;
+    },
+    link(detail) {
+      const link = `/dorm/${this.id}/${detail}`;
+      // console.log('link:', link);
+      return link;
     },
   },
   computed: {
     id() {
       return this.$route.params.id;
     },
-    details() {
-      return info.dorm[this.id].amenities[0].id;
-    },
-    text() {
-      return info.dorm[this.id].amenities[0].name;
-    },
-    // details(order) {
-    //   return info.dorm[this.id].amenities[this.order].id;
-    // },
-    // text(order) {
-    //   return info.dorm[this.id].amenities[this.order].name;
-    // },
-    // link() {
-    //   return `/dorm/${this.id}/${this.details}`;
-    // },
-    // cssHere() {
-    // }
+    buttons() {
+      return [
+        {
+          text: this.text(0),
+          details: this.details(0),
+          link: this.link(this.details(0)),
+          position: "absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2",
+        },
+        {
+          text: this.text(1),
+          details: this.details(1),
+          link: this.link(this.details(1)),
+          position: "absolute top-1/2 left-1/3 -translate-x-1/4 -translate-y-1/2",
+        },
+        {
+          text: this.text(2),
+          details: this.details(2),
+          link: this.link(this.details(2)),
+          position: "absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        },
+        {
+          text: this.text(3),
+          details: this.details(3),
+          link: this.link(this.details(3)),
+          position: "absolute top-1/2 left-2/3 -translate-x-3/4 -translate-y-1/2"
+        }
+      ]
+    }
   },
 };
 </script>
