@@ -5,7 +5,9 @@
       v-for="(dorm, index) in info.dorm"
       :key="index"
     >
-      <SquareButton :route="`/dorm/${index + 1}`" :text="dorm.name" />
+      <NuxtLink :to="`/dorm/${index + 1}`">
+        <SquareButton :text="dorm.name" />
+      </NuxtLink>
     </div>
   </div>
 </template>

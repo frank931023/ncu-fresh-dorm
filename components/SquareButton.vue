@@ -12,10 +12,10 @@
   <script>
 export default {
   // Your component logic goes here
-  props: ["route", "text"],
-  methods: {
-    handleClick() {
-      this.$router.push(this.route);
+  props: {
+    text: {
+      type: String,
+      required: true,
     },
   },
 };

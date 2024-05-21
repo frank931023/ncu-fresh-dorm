@@ -11,7 +11,12 @@
   <script>
 export default {
   // Your component logic goes here
-  props: ["text"],
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
   
