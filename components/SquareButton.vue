@@ -4,7 +4,7 @@
       class="w-32 h-32 rotate-45 border-2 border-black bg-neutral-300"
       @click="handleClick"
     >
-      <p>{{ text }}</p>
+      <p class="-rotate-45">{{ text }}</p>
     </button>
   </div>
 </template>

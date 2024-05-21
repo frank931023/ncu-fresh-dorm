@@ -22,6 +22,7 @@ export default {
     goBackToIndex() {
       this.$router.push("/");
     },
+    
     // here is not working
     text() {
       const index = this.id - 1;
