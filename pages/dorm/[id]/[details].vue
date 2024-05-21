@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <h1>Hello, this is {{ name }} for Dorm {{ id }}</h1> -->
     <h1>Hello, this is {{ details }} for Dorm {{ id }}</h1>
     <button @click="goBackToIndex" class="border-black bg-slate-300">
       Go back to index page
@@ -30,10 +29,6 @@ export default {
       const amenity = dorm.amenities.find(a => a.id === this.details);
       return amenity.description;
     },
-    // name() {
-    //   const index = this.id - 1;
-    //   const dorm = info.dorm[index];
-    // }
   },
   computed: {
     id() {

@@ -11,6 +11,7 @@ export default {};
 </script>
 
 <style>
+/* the slide down transition failed */
 .slide-enter-active,
 .slide-leave-active {
   transition: all 0.4s ease;
