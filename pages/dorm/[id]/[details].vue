@@ -5,17 +5,30 @@
       Go back to index page
     </button>
 
-    <BaseCard class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"/>
-
+    <BaseCard
+      :text="text"
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    />
   </div>
 </template>
   
-  <script>
+<script>
+import { ref, reactive } from "vue";
+import information from "/assets/information.json";
+
+const info = reactive(information);
 export default {
   methods: {
     goBackToIndex() {
       this.$router.push("/");
     },
+    // here is not working
+    text() {
+      const index = this.id - 1;
+      const dorm = info.dorm[index];
+      const amenity = dorm.amenities.find(a => a.id === this.details);
+      return amenity.description;
+    }
   },
   computed: {
     id() {
