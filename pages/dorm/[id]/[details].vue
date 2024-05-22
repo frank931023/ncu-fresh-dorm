@@ -26,8 +26,10 @@ export default {
     text() {
       const index = this.id - 1;
       const dorm = info.dorm[index];
-      const amenity = dorm.amenities.find(a => a.id === this.details);
-      return amenity.description;
+      const amenity = dorm.amenities.find((amenity) => amenity.id === this.details);
+      console.log(amenity);
+      const description = amenity ? amenity.description : "No description available";
+      return description;
     },
   },
   computed: {
